@@ -1,0 +1,15 @@
+create or replace procedure p1(p_1 number,
+                               p_2 out varchar2) 
+as 
+cursor c1 is select * from emp;
+declare 
+m_var emp%rowtype;
+
+ begin 
+ select * into m_var from emp where emp_name= 'don';
+
+end;
+exception
+when others then 
+null;
+end;
